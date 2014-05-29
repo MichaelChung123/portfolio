@@ -1,0 +1,741 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$font-stack: 'Cabin', 'sans-serif';
+$body-font: 'Maven Pro', 'sans-serif';
+$primary-color: #6cdba6;
+$body-color: #2F2D2C;;
+$grey: #f8f6f2;
+$grey-text: #bab9b1;
+$white: #fff;
+$shadow-color: #59a07e;
+
+/* Mixin for long shadow */
+
+body {
+	font: 100% $body-font;
+	font-size: 16px;
+	color: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $font-stack;
+	text-transform: uppercase;
+}
+
+a{
+	color: $primary-color;
+	transition: all 0.5s ease;
+}
+
+a:hover{
+	color: $shadow-color;
+}
+
+p{
+	font-family: $body-font;
+}
+
+textarea { 
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.logo{
+	background: $primary-color;
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+	text-align: center;
+	float: left;
+	position: relative;
+
+	h1{
+		font-family: $font-stack;
+		color: $white;
+		font-size: 4.4em;
+		line-height: 80px;
+		margin-left: 5px;
+		font-weight: 600;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	.initial{
+		-webkit-transform: translateZ(0);
+		transition: all 0.5s .8s ease;
+		text-shadow: 0px 0px 0 #59A07E,1px 1px 0 #59A07E,2px 2px 0 #59A07E,
+		3px 3px 0 #59A07E,4px 4px 0 #59A07E,5px 5px 0 #59A07E,
+		6px 6px 0 #59A07E,7px 7px 0 #59A07E,8px 8px 0 #59A07E,
+		9px 9px 0 #59A07E,10px 10px 0 #59A07E,11px 11px 0 #59A07E,
+		12px 12px 0 #59A07E,13px 13px 0 #59A07E,14px 14px 0 #59A07E,
+		15px 15px 0 #59A07E,16px 16px 0 #59A07E,17px 17px 0 #59A07E,
+		18px 18px 0 #59A07E,19px 19px 0 #59A07E,20px 20px 0 #59A07E,
+		21px 21px 0 #59A07E,22px 22px 0 #59A07E,23px 23px 0 #59A07E,
+		24px 24px 0 #59A07E,25px 25px 0 #59A07E,26px 26px 0 #59A07E,
+		27px 27px 0 #59A07E,28px 28px 0 #59A07E,29px 29px 0 #59A07E,
+		30px 30px 0 #59A07E,31px 31px 0 #59A07E,32px 32px 0 #59A07E,
+		33px 33px 0 #59A07E,34px 34px 0 #59A07E,35px 35px 0 #59A07E,
+		36px 36px 0 #59A07E,37px 37px 0 #59A07E,38px 38px 0 #59A07E,
+		39px 39px 0 #59A07E,40px 40px 0 #59A07E,41px 41px 0 #59A07E,
+		42px 42px 0 #59A07E,43px 43px 0 #59A07E,44px 44px 0 #59A07E,
+		45px 45px 0 #59A07E,46px 46px 0 #59A07E,47px 47px 0 #59A07E,
+		48px 48px 0 #59A07E,50px 50px 0 rgba(0, 0, 0, 0);
+	}
+
+	.shadow {
+		-webkit-transform: translateZ(0);
+		transition: all 0.5s 0s ease;
+		text-shadow: 0px 0px 0 #59A07E,1px 0px 0 #59A07E,2px 0px 0 #59A07E,
+		3px 0px 0 #59A07E,4px 0px 0 #59A07E,5px 0px 0 #59A07E,
+		6px 0px 0 #59A07E,7px 0px 0 #59A07E,8px 0px 0 #59A07E,
+		9px 0px 0 #59A07E,10px 0px 0 #59A07E,11px 0px 0 #59A07E,
+		12px 0px 0 #59A07E,13px 0px 0 #59A07E,14px 0px 0 #59A07E,
+		15px 0px 0 #59A07E,16px 0px 0 #59A07E,17px 0px 0 #59A07E,
+		18px 0px 0 #59A07E,19px 0px 0 #59A07E,20px 0px 0 #59A07E,
+		21px 0px 0 #59A07E,22px 0px 0 #59A07E,23px 0px 0 #59A07E,
+		24px 0px 0 #59A07E,25px 0px 0 #59A07E,26px 0px 0 #59A07E,
+		27px 0px 0 #59A07E,28px 0px 0 #59A07E,29px 0px 0 #59A07E,
+		30px 0px 0 #59A07E,31px 0px 0 #59A07E,32px 0px 0 #59A07E,
+		33px 0px 0 #59A07E,34px 0px 0 #59A07E,35px 0px 0 #59A07E,
+		36px 0px 0 #59A07E,37px 0px 0 #59A07E,38px 0px 0 #59A07E,
+		39px 0px 0 #59A07E,40px 0px 0 #59A07E,41px 0px 0 #59A07E,
+		42px 0px 0 #59A07E,43px 0px 0 #59A07E,44px 0px 0 #59A07E,
+		45px 0px 0 #59A07E,46px 0px 0 #59A07E,47px 0px 0 #59A07E,
+		48px 0px 0 #59A07E,50px 0px 0 rgba(0, 0, 0, 0);
+	}
+
+	.name{
+		width: 230px;
+		font-family: $font-stack;
+		font-weight: 700;
+		color: $shadow-color;
+		font-size: 18px;
+		letter-spacing: 2px;
+		z-index: 0;
+		opacity: 0;
+		position: absolute;
+		top: 38%;
+		left: 90%;
+		transition: all 0.8s 0s ease;
+	}
+
+	.show{
+		z-index: 0;
+		opacity: 100;
+		left: 110%;
+		transition: all 0.5s 0.3s ease;
+	}
+}
+
+.logo:after{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 88%;
+	left: 15%;
+	border-left: 10px solid rgba(0, 0, 0, 0);
+	border-right: 8px solid rgba(0, 0, 0, 0);
+	border-top: 16px solid #6CDBA6;
+	transform: rotate (31px);
+	-ms-transform: rotate(31deg);
+	-webkit-transform: rotate(31deg);
+	transform: rotate(31deg);
+}
+
+.nav{
+	background: $white;
+	height: 105px;
+	padding: 10px 40px;
+	box-shadow: 0px 2px 6px #222;
+
+	.nav-bar{
+		float: right;
+	}
+
+	.nav-links{
+		padding: 10px 0;
+		line-height: 70px;
+
+		li{
+			display: inline;
+			margin: 15px;
+		}
+
+		a{
+			margin-left: 20px;
+			font-size: 16px;
+			text-transform: uppercase;
+			font-family: $font-stack;
+			text-decoration: none;
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+.overlay{
+	background: rgba(108, 218, 166, 1.0);
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.hero{
+	height: 460px;
+	background-size: cover;
+	color: $white;
+	font-weight: 700;
+
+	.hero-header{
+		margin-top: 3em;
+		text-align: center;
+		h1{
+			margin: 10px auto 0;
+			font-size: 2.2em;
+			letter-spacing: 6px;
+		}
+
+		h5{
+			font-size: 1em;
+			letter-spacing: 2px;
+		}
+
+		.circle{
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
+			margin: 0 auto 1em;
+			background: url('/img/selfie-small.jpg');
+			border: 4px solid $white;
+  			background-position-y: -10px;
+		}
+	}
+}
+
+.divider{
+	background: $shadow-color;
+	text-align: center;
+	color: $white;
+
+	h2{
+		padding: 40px;
+		font-size: 2.2em;
+		letter-spacing: 6px;
+		font-weight: 700;
+	}
+}
+
+.section{
+	background: $grey;
+	padding: 80px 40px;
+
+	.work-image{
+		width: 100%;
+		height: auto;
+	}
+
+	.work-content{
+		color: $body-color;
+
+		.h4{
+			margin-top: 10px;
+			font-size: 1.4em;
+			letter-spacing: 2px;
+			font-weight: 400;
+		}
+
+		.sub-header{
+			font-family: $body-font;
+			font-size: 16px;
+			color: $grey-text;
+			text-transform: none;
+		}
+
+		.p{
+			margin: 20px 0;
+			line-height: 1.6em;
+		}
+
+		.client-paragraph{
+			margin: 20px 0 30px;
+		}
+
+		.p a{
+			font-size: 16px;
+		}
+
+		a{
+			font-size: 18px;
+			text-decoration: none;
+		}
+
+		.project-link{
+			padding: 10px;
+			background: $primary-color;
+			color: $white;
+			margin: 1em 0;
+		}
+
+		.project-link:hover{
+			padding: 10px;
+			background: $shadow-color;
+			color: $white;
+		}
+	}
+}
+
+.contact{
+	text-align: center;
+	background: $primary-color;
+	color: $white;
+
+	h4{
+		margin: 0px 0px 40px;
+		font-size: 1.4em;
+		letter-spacing: 2px;
+		font-weight: 400;
+	}
+
+	.email{
+		background: $white;
+		color: $primary-color;
+		font-size: 18px;
+		padding: 15px;
+		text-decoration: none;
+	}
+
+	.email:hover{
+		color: $grey;
+		background: $shadow-color;
+	}
+}
+
+.social{
+	margin-top: 60px;
+
+	li{
+		display: inline;
+	}
+
+	img{
+		background: transparent;
+		border-radius: 50%;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		transition: all 0.5s ease;
+	}
+
+	.dribbble:hover{
+		background: #EA4C89;
+		
+	}
+
+	.linkedin:hover{
+		background: #287BBC;
+	}
+
+	.instagram:hover{
+		background: #3F729B;
+	}
+}
+
+.tiles{
+	background: $white;
+	padding: 40px 20px;
+
+	.project-tile{
+		position: relative;
+		background-color: $grey;
+		transition: all 0.5s ease;
+		margin-bottom: 40px;
+	}
+
+	img{
+		transition: opacity 0.5s ease;
+	}
+
+	a{
+		color: $white;
+		text-decoration: none;
+	}
+
+	.caption{
+		font-family: $font-stack;
+		font-size: 22px;
+		font-weight: 700;
+		position: absolute;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		text-align: center;
+		top: 48%;
+		width: 100%;
+		opacity: 0;
+		color: $white;
+		transition: opacity 0.5s ease;
+	}
+
+	.project-tile:hover{
+		background-color: $primary-color;
+	}
+
+	.project-tile:hover img{
+		opacity: 0.1;
+	}
+
+	.project-tile:hover .caption{
+		opacity: 1;
+	}
+}
+
+.footer{
+	background: $body-color;
+	color: $white;
+	padding: 80px 40px;
+	text-align: center;
+}
+
+.alternate{
+	background: $white;
+}
+
+.left-frames, .right-frames{
+	width: 100%;
+	margin: 10px 0 0;
+}
+
+.path{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: draw 4s 0.5s linear forwards;
+	-webkit-animation: draw 4s 0.5s linear forwards;
+	-moz-animation: draw 4s 0.5s linear forwards;
+	-o-animation: draw 4s 0.5s linear forwards;
+}
+
+.line{
+	animation: fade 4s forwards normal;
+	-webkit-animation: fade 3s forwards normal;
+	-moz-animation: fade 3s forwards normal;
+	-o-animation: fade 3s forwards normal;
+}
+
+@-webkit-keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.item {
+  float: left;
+  margin-left: 5%;
+  transition: all 0.5s ease;
+}
+ 
+.item:first-child {
+  margin-left: 0;
+}
+
+.item.full {
+  width: 100%;
+}
+  
+.item.two-thirds {
+  width: 65%;
+}
+  
+.item.half {
+  width: 47.5%;
+}
+ 
+.item.one-third {
+  width: 30%;
+}
+
+.project-tile{
+	float: left;
+	width: 30.3%;
+	margin-left: 20px;
+	margin-right: 20px;
+	transition: all 0.5s ease;
+}
+ 
+.item.one-fourth {
+  width: 21.25%;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.screenshot{
+	margin-left: 0;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1601px) {
+  .project-tile {
+    width: 31%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .project-tile {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 980px) {
+  .project-tile {
+    width: 29%;
+  }
+}
+
+@media screen and (max-width: 979px) and (min-width: 769px) {
+  .project-tile {
+    width: 44%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation : landscape) {
+  .project-tile {
+    width: 45.5%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation : portrait) {
+  .item.full,
+  .item.two-thirds,
+  .item.half,
+  .item.one-third,
+  .item.one-fourth {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .project-tile {
+    width: 44.5%;
+  }
+
+  .hero{
+  	height: auto;
+
+  	.left-frames, .right-frames{
+  		display: none;
+  	}
+
+  	.item.one-third{
+  		width: 100%;
+  	}
+
+  	.hero-header{
+  		margin: 2em auto;
+
+  		h1{
+  			font-size: 1.8em;
+  			line-height: 1em;
+  			margin-bottom: 10px;
+  		}
+
+  		.circle{
+  			height: 150px;
+  			width: 150px;
+  			background-size: 150px 150px;
+  		}
+  	}
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .item.full,
+  .item.two-thirds,
+  .item.half,
+  .item.one-third,
+  .item.one-fourth,
+  .project-tile {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .work-image{
+  	margin-bottom: 1em;
+  }
+
+  .left-frames, .right-frames{
+  	display: none;
+  }
+
+  .hero{
+  	height: auto;
+
+  	.hero-header{
+  		margin: 2em auto;
+
+  		h1{
+  			font-size: 1.8em;
+  			line-height: 1em;
+  			margin-bottom: 10px;
+  		}
+
+  		.circle{
+  			height: 150px;
+  			width: 150px;
+  			background-size: 150px 150px;
+  		}
+  	}
+  }
+
+  .logo{
+  	margin-left: 5px;
+
+  	.name{
+  		width: 195px;
+  		font-size: 16px;
+  		top: 40%;
+  	}
+  }
+
+  .section{
+  	padding: 40px 20px;
+
+  	.h4{
+  		font-size: 1.3em;
+  	}
+
+  	.sub-header{
+  		font-size: 14px;
+  	}
+
+  	.work-image{
+  		margin-bottom: 0em;
+  	}
+
+  }
+
+  .divider{
+
+  	.h2{
+  		padding: 20px;
+  		font-size: 1.6em;
+  	}
+  }
+
+  .tiles{
+
+  	.project-tile{
+  		margin-bottom: 20px;
+  	}
+
+  	.caption{
+  		font-size: 18px;
+  	}
+  }
+
+  .social{
+  	margin-top: 40px;
+  }
+
+  .footer{
+  	padding: 40px 20px;
+  }
+
+}
+
+@media screen and (max-width: 554px) {
+
+.nav{
+  	padding: 10px 20px;
+  	height: 180px;
+
+  	.nav-bar{
+  		float: left;
+		width: 100%;
+		text-align: center;
+		margin-top: 1em;
+  	}
+
+  	.nav-links{
+  		padding: 20px 0px;
+		line-height: 20px;
+
+	  	li{
+	  		margin: 0;
+	  	}
+
+
+		a{
+			font-size: 15px;
+			margin-left: 15px;
+		}
+  	}
+  }
+
+}
+
